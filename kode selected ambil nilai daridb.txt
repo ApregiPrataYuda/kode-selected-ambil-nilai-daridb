@@ -1,0 +1,11 @@
+kode selected ambil nilai daridb
+
+ <div class="form-group col-md-4  <?= form_error('warna') ? 'has-error' : null ?>">
+                <label for="warna"><span> Colors*</span> </label>
+                 <select name="warna" id="warna" class="form-control">
+                   <?= $warna = $this->input->post('warna') ? $this->input->post('warna') :  $row->warna?>
+                    <option value="Red" <?= $warna == 'Red'  ? 'selected' : null ?>>Red</option>
+                    <option value="Blue" <?= $warna == 'Blue'  ? 'selected' : null ?>>Blue</option>
+                 </select>
+                <small class="text-danger" style="font-style: italic "><span class="badge badge-danger"><?= form_error('warna') ?></span></small>
+                </div>
