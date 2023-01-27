@@ -9,3 +9,13 @@ kode selected ambil nilai daridb
                  </select>
                 <small class="text-danger" style="font-style: italic "><span class="badge badge-danger"><?= form_error('warna') ?></span></small>
                 </div>
+                
+                
+                
+                
+                
+                
+                
+                  <?php foreach ($getcb as $key => $data) { ?>
+                     <option value="<?= $data->kode_cabang ?> - <?= $data->nama_cabang ?>" <?=$data->kode_cabang.' - '.$data->nama_cabang == $row->pengirim ? "selected" : null?>><?= $data->kode_cabang ?> - <?= $data->nama_cabang ?></option>
+                    <?php } ?>
